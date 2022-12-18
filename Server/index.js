@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/getall", async (req, res) => {
+ 
   const result = await fetch("https://randomuser.me/api/?results=100");
   const body = await result.json();
 
@@ -22,8 +23,10 @@ app.get("/getall", async (req, res) => {
 });
 
 app.get('/', async(req, res)=>{
+    
     const result = await ProjectModel.find({});
     res.send(result);
+
 })
 
 app.delete('/delete', async(req, res)=>{

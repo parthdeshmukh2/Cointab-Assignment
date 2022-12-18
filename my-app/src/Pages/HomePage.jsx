@@ -23,7 +23,11 @@ const getData = () => {
     .catch((err)=> console.log(err));
 }
   
-  
+  const deleteData = () => {
+    axios.delete("http://localhost:8080/delete")
+    .then((res)=> alert("Data will be deleted Permenantly"))
+    .catch((err)=> console.log(err));
+  }
  
 
 
@@ -42,7 +46,7 @@ const getData = () => {
       <Button mt="4" bg="green" color="white" onClick={getData}>
         Fetch
       </Button>
-      <Button mt="4" bg="red" color="white">
+      <Button mt="4" bg="red" color="white" onClick={deleteData}>
         Delete
       </Button>
       <Button mt="4" bg="blue.500" color="white" onClick={()=> navigate('/user')}>

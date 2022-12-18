@@ -1,7 +1,7 @@
 import { Box, Select } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import UserCard from "./UserCard";
+import UserCard from "../Components/UserCard";
 import axios from "axios";
 const UserProfile = () => {
   const [data, setData] = useState([]);
@@ -16,13 +16,7 @@ const UserProfile = () => {
   console.log(data);
   return (
     <Box>
-     <Box w='80%' display='flex' justifyContent='center' m='auto' p='4'>
-        <Select placeholder="Filter By Gender" w={{base:"80%", md:'50%', lg:"30%"}}>
-            <option value="">Male</option>
-            <option value="">Female</option>
-        </Select>
-
-     </Box>
+   
    
     <Box
       display="grid"
