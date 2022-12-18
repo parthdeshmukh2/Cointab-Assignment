@@ -15,7 +15,7 @@ const navigate = useNavigate();
 
 
 const getData = () => {
-    axios.get("http://localhost:8080/getall")
+    axios.get("https://cointab-assignment-one.vercel.app/getall")
     .then((res)=> {
         console.log(res.data);
         alert("Data Added To the User Account")
@@ -24,7 +24,7 @@ const getData = () => {
 }
   
   const deleteData = () => {
-    axios.delete("http://localhost:8080/delete")
+    axios.delete("https://cointab-assignment-one.vercel.app/delete")
     .then((res)=> alert("Data will be deleted Permenantly"))
     .catch((err)=> console.log(err));
   }

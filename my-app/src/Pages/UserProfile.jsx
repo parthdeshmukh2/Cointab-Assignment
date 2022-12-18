@@ -8,7 +8,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080")
+      .get("https://cointab-assignment-one.vercel.app/")
       .then((res) => setData(res.data[0].Data))
       .catch((err) => console.log(err));
   }, []);
